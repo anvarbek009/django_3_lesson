@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="./products.css">
+</head>
+<body>
+    <h1>Products</h1>
+    <div class="container">
+        <div class='card'>
+            {% for p in products %}
+                <image src="{{p.image.url}}" />
+                <h2>{{ p.model }}</h2><br/>
+                <h2>{{ p.price }}</h2><br/>
+                <h2>{{ p.info }}</h2><br/>
+                <h2>{{ p.category }}</h2><br/>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
